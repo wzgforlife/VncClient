@@ -1,0 +1,20 @@
+buildscript {
+    repositories {
+        // 🇨🇳 国内镜像（必须）
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
+
+        // 官方兜底
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        // Android 构建插件
+        classpath "com.android.tools.build:gradle:8.1.2"
+
+        // ✅ Kotlin 插件（关键！）
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.24"
+    }
+}
